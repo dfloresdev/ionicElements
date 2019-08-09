@@ -22,6 +22,21 @@ export class InicioPage implements OnInit {
       icon: 'happy',
       name: 'Avatar',
       redirectTo: '/avatar'
+    },
+    {
+      icon: 'hand',
+      name: 'Botones',
+      redirectTo: '/botones'
+    },
+    {
+      icon: 'logo-buffer',
+      name: 'Cartas de info',
+      redirectTo: '/card'
+    },
+    {
+      icon: 'done-all',
+      name: 'Checks',
+      redirectTo: '/check'
     }
   ];
 
