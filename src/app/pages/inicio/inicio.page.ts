@@ -47,6 +47,11 @@ export class InicioPage implements OnInit {
       icon: 'add-circle',
       name: 'Fab icon',
       redirectTo: '/fab'
+    },
+    {
+      icon: 'grid',
+      name: 'Grid - Rows',
+      redirectTo: '/grid'
     }
   ];
 

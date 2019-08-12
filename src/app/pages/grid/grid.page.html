@@ -1,0 +1,32 @@
+<app-header titulo="Grid"></app-header>
+
+<ion-content padding fullscreen>
+
+  <ion-grid>
+    <!-- <ion-row>
+      <ion-col *ngFor="let j of [1,1,1,1,1,1,1,1,1,1,1,1]; let i = index">
+        <h1>Holas {{ i + 1 }}</h1>
+      </ion-col>
+    </ion-row> -->
+
+    <ion-row>
+      <ion-col size-lg="3" size-md="4" size-sm="6" size-xs="12"
+      *ngFor="let j of [1,1,1,1,1,1,1,1,1,1,1,1]; let i = index">
+        <ion-card>
+          <ion-img src="/assets/shapes.svg"></ion-img>
+
+          <ion-card-header>
+            <ion-card-subtitle>Cad Subtitle {{ i + 1 }}</ion-card-subtitle>
+            <ion-card-title>Titulo Grande</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia repellendus quia quidem eius corrupti labore tenetur fugiat repellat ratione totam maxime enim nihil ipsum ex, nemo laudantium. Esse, ratione delectus.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>
