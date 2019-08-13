@@ -72,6 +72,11 @@ export class InicioPage implements OnInit {
       icon: 'logo-buffer',
       name: 'Reordenamiento',
       redirectTo: '/list-reorder'
+    },
+    {
+      icon: 'flame',
+      name: 'Loading...',
+      redirectTo: '/loading'
     }
   ];
 
