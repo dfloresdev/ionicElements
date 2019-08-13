@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
+import { Componente } from '../../interfaces/interfaces';
+import { DataService } from '../../services/data.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-inicio',
@@ -7,88 +11,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioPage implements OnInit {
 
-  componentes: Componente[] = [
-    {
-      icon: 'filing',
-      name: 'Action Sheet',
-      redirectTo: '/action-sheet'
-    },
-    {
-      icon: 'expand',
-      name: 'Alert',
-      redirectTo: '/alert'
-    },
-    {
-      icon: 'happy',
-      name: 'Avatar',
-      redirectTo: '/avatar'
-    },
-    {
-      icon: 'hand',
-      name: 'Botones',
-      redirectTo: '/botones'
-    },
-    {
-      icon: 'logo-buffer',
-      name: 'Cartas de info',
-      redirectTo: '/card'
-    },
-    {
-      icon: 'done-all',
-      name: 'Checks',
-      redirectTo: '/check'
-    },
-    {
-      icon: 'calendar',
-      name: 'Calendario',
-      redirectTo: '/date-time'
-    },
-    {
-      icon: 'add-circle',
-      name: 'Fab icon',
-      redirectTo: '/fab'
-    },
-    {
-      icon: 'grid',
-      name: 'Grid - Rows',
-      redirectTo: '/grid'
-    },
-    {
-      icon: 'infinite',
-      name: 'Infinite Scroll',
-      redirectTo: '/infinite-scroll'
-    },
-    {
-      icon: 'barcode',
-      name: 'Input',
-      redirectTo: '/input'
-    },
-    {
-      icon: 'code-working',
-      name: 'Listas - Sliding',
-      redirectTo: '/list'
-    },
-    {
-      icon: 'logo-buffer',
-      name: 'Reordenamiento',
-      redirectTo: '/list-reorder'
-    },
-    {
-      icon: 'flame',
-      name: 'Loading...',
-      redirectTo: '/loading'
-    }
-  ];
+  componentes: Observable<Componente[]>;
 
-  constructor() { }
+  constructor( private menuCtrl: MenuController,
+               private dataService: DataService ) { }
 
   ngOnInit() {
+    this.componentes = this.dataService.getMenuOpciones();
+  }
+
+  toggleMenu() {
+    this.menuCtrl.toggle();
   }
 
 }
 
-interface Componente {
-  icon: string;
-  name: string;
-  redirectTo: string;
-}
+
