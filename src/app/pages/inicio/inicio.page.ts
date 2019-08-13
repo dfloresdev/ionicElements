@@ -62,6 +62,11 @@ export class InicioPage implements OnInit {
       icon: 'barcode',
       name: 'Input',
       redirectTo: '/input'
+    },
+    {
+      icon: 'code-working',
+      name: 'Listas - Sliding',
+      redirectTo: '/list'
     }
   ];
 
