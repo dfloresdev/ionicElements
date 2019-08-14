@@ -73,6 +73,11 @@
       "icon": "albums",
       "name": "Modal",
       "redirectTo": "/modal"
+    },
+    {
+      "icon": "filing",
+      "name": "Popover",
+      "redirectTo": "/popover"
     }
   ]
   
